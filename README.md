@@ -1,6 +1,4 @@
 # Aprendizaje Estadístico
-Material utilizado en la materia Aprendizaje Estadístico.
-
 - Año y cuatrimestre: 1C 2020
 - Docente: Jemina García
 
