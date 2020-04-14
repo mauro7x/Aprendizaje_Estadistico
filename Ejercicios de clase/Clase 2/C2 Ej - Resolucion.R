@@ -72,10 +72,6 @@ M_cov
 XtX = t(X) %*% X
 XtX
 
-XtX2 = t(M_cov) %*% M_cov
-XtX2
-
-
 # 8. Verifique que sum{n}{i=1} (Yi − Ŷi ) = 0.
 R = y - x_p
 sum(R) <= 0.0000001 #no sera exactamente cero porque se utilizan numeros en representacion flotante

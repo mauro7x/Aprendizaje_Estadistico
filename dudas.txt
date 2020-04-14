@@ -1,13 +1,11 @@
 # TEORICAS
 
-- X' significa X^T?
-
-
 
 # PRACTICAS
 
 > Ej. clase 2, Abril:
 	- (7) Pide simplemente calcular X^T * X? Quien es X?
 	- (9) Como centramos las observaciones? les restamos el promedio nada mas?
+> Guia 1.
 	- (15) Estimar la correlacion entre x1 y x2, lo hacemos calculando la covarianza, usando mean() para estimar la esperanza?
 
