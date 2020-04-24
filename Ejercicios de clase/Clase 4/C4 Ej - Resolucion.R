@@ -27,6 +27,8 @@ medv <- BostonHousing$medv
 
 X <- cbind(nox, rm, lstat, medv)
 
+df<- data.frame(X)
+
 cor(X)
 
 # -------------------------------------------------------------------------------------------
@@ -42,7 +44,7 @@ cor(X)
 # -------------------------------------------------------------------------------------------
 # Ajustamos el modelo.
 
-ajuste <- lm(medv ~ nox + rm + lstat, data=BostonHousing)
+ajuste <- lm(medv ~ nox + rm + lstat, data=df)
 summary(ajuste)
 
 # Significacion de la regresion (ver carpeta).
@@ -87,15 +89,15 @@ summary(ajuste)
 # Verificamos en R lo obtenido.
 #  ((solve(t(X) %*% X))[i][j]) / (sqrt(((solve(t(X) %*% X))[i][i])*((solve(t(X) %*% X))[j][j]))) 
 
-correlacion <- function(X, i, j) {
-  return(((solve(t(X) %*% X))[i][j]) / (sqrt(((solve(t(X) %*% X))[i][i])*((solve(t(X) %*% X))[j][j]))))
-}
+#correlacion <- function(X, i, j) {
+  #return(((solve(t(X) %*% X))[i][j]) / (sqrt(((solve(t(X) %*% X))[i][i])*((solve(t(X) %*% X))[j][j]))))
+#}
 
-for (i in 1:4) {
-  for (j in 0:3){
-    print(((solve(t(X) %*% X))[j*4 + i]) / (sqrt(((solve(t(X) %*% X))[(i-1)*4 + i])*((solve(t(X) %*% X))[j*4 + (j+1)]))))
-  }
-}
+#for (i in 1:4) {
+  #for (j in 0:3){
+    #print(((solve(t(X) %*% X))[j*4 + i]) / (sqrt(((solve(t(X) %*% X))[(i-1)*4 + i])*((solve(t(X) %*% X))[j*4 + (j+1)]))))
+  #}
+#}
 
 # funciona! :)
 
@@ -104,8 +106,10 @@ for (i in 1:4) {
 # Es necesario asumir que se cumple el modelo omega donde Y ~ Nn(XB, sigma^2*I),
 # ademas de que rg(X) = p, B = R^p, y tenemos n observaciones.
 
+# SUPONER ERROR NORMAL Y DE ESPERANZA 0.
+
 # -------------------------------------------------------------------------------------------
-# 2. 
+# 2. Hecho en otro R.
 # -------------------------------------------------------------------------------------------
 
 
