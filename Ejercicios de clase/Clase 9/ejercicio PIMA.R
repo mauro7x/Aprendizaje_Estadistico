@@ -1,5 +1,4 @@
 library(ISLR)
-library(glmnet)
 library(ggplot2)
 library(glmnet)
 library(faraway)
